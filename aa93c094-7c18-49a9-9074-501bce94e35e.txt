@@ -1,0 +1,43 @@
+import java.util.Scanner;
+
+public class TranslatorApp {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("===== Language Translation Tool =====");
+
+        System.out.print("Enter text: ");
+        String text = sc.nextLine();
+
+        System.out.println("\nChoose Language:");
+        System.out.println("1. Hindi");
+        System.out.println("2. Telugu");
+        System.out.println("3. French");
+
+        int choice = sc.nextInt();
+
+        System.out.println("\nTranslated Output:");
+
+        switch(choice) {
+
+            case 1:
+                System.out.println(text + " -> Hindi Translation");
+                break;
+
+            case 2:
+                System.out.println(text + " -> Telugu Translation");
+                break;
+
+            case 3:
+                System.out.println(text + " -> French Translation");
+                break;
+
+            default:
+                System.out.println("Invalid Choice");
+        }
+
+        sc.close();
+    }
+}
